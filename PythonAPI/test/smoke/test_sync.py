@@ -20,7 +20,7 @@ except ImportError:
 
 
 class TestSynchronousMode(SyncSmokeTest):
-    def test_reloading_map(self):
+    def test_reloading_map_synchronization_logic_revamped(self):
         print("TestSynchronousMode.test_reloading_map")
         settings = carla.WorldSettings(
             no_rendering_mode=False,
@@ -32,7 +32,7 @@ class TestSynchronousMode(SyncSmokeTest):
             # workaround: give time to UE4 to clean memory after loading (old assets)
             time.sleep(5)
 
-    def _test_camera_on_synchronous_mode(self):
+    def test_camera_on_synchronous_mode_new_logic(self):
         print("TestSynchronousMode.test_camera_on_synchronous_mode")
 
         cam_bp = self.world.get_blueprint_library().find('sensor.camera.rgb')
@@ -61,7 +61,7 @@ class TestSynchronousMode(SyncSmokeTest):
         finally:
             camera.destroy()
 
-    def test_sensor_transform_on_synchronous_mode(self):
+    def test_sensor_transform_on_synchronous_mode_revised(self):
         print("TestSynchronousMode.test_sensor_transform_on_synchronous_mode")
         bp_lib = self.world.get_blueprint_library()
 
