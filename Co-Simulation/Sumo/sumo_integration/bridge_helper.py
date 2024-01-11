@@ -63,8 +63,8 @@ class BridgeHelper(object):
 
         # Transform to carla reference system (left-handed system).
         out_transform = carla.Transform(
-            carla.Location(out_location[0], -out_location[1], out_location[2]),
-            carla.Rotation(out_rotation[0], out_rotation[1] - 90, out_rotation[2]))
+            location=carla.Location(x=out_location[0], y=-out_location[1], z=out_location[2]),
+            rotation=carla.Rotation(pitch=out_rotation[0], yaw=out_rotation[1] - 90, roll=out_rotation[2]))
 
         return out_transform
 
@@ -90,8 +90,8 @@ class BridgeHelper(object):
 
         # Transform to sumo reference system.
         out_transform = carla.Transform(
-            carla.Location(out_location[0], -out_location[1], out_location[2]),
-            carla.Rotation(out_rotation[0], out_rotation[1] + 90, out_rotation[2]))
+            location=carla.Location(x=out_location[0], y=-out_location[1], z=out_location[2]),
+            rotation=carla.Rotation(pitch=out_rotation[0], yaw=out_rotation[1] + 90, roll=out_rotation[2]))
 
         return out_transform
 
