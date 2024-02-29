@@ -2,7 +2,7 @@ repo_name: 2lambda123/carla
 report_id: 18b41224b371eb11ef25861fbd007f2b
 version: 0.1
 repo_type: Public
-timestamp: '2024-01-09T06:57:35+00:00'
+timestamp: '2024-02-29T19:16:43+00:00'
 requested_by: bernatx
 provider: github
 branch: master
@@ -78,7 +78,7 @@ tools:
   last_updated_by: Daniel Santos-Olivan
   last_updated_on: 2020-07-29 15:08:03.000000000 Z
 - name: CMake
-  description: 'An open-source system that manages the build process '
+  description: An open-source system that manages the build process
   website_url: http://www.cmake.org/
   open_source: false
   hosted_saas: false
